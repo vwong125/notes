@@ -1,0 +1,98 @@
+Introduced in React 16.8 to let you use React features without writing a class
+
+Hooks are functions that let you hook into React state and lifecycle features from function components
+
+Hooks only work with function components
+
+State Hook (useState)
+    ``` 
+    import { useState } from 'react'
+    
+    const [state, setState] = useState(defaultState);
+    ```
+
+    - useState is the most commonly used hooked to preserve state between re-renders
+    - set the state using the setState function
+    - only call hooks at the top level - not in loops, conditions, or functions
+
+Effect Hook (useEffect)
+    ```
+    import { useEffect } from 'react;
+
+    const Example = () => {
+        useEffect(() => {
+            console.log('fetch data here');
+
+            // clean up is optional
+            return () => console.log('this function cleans up, maybe remove a listener here')
+        }, [])  // the second parameter [] specifies when the effect should be run, [] specifies run once
+
+        return <div>Use Effect Example</div>
+    }
+
+
+    - Perform side effects from a function component
+    - serves the same purpose as componentDidMount, componentDidUpdate, and componentWillUnMount
+    - perform data fetching, subscriptions, or manually changing the DOM
+    - by default, React runs the effect after every render
+    - placing a variable in the second paramater [] specifies to only render when that variable changes
+
+Context (useContext)
+    ```
+    const value = useContext(myContext)
+    ```
+    - subscribe to React context without introducing nesting
+    - alternative to Redux
+    - myContext is a value returned from React.createContext
+    - value of context is determined by <MyContext.Provider />
+
+Reducer (useReducer)
+    ```
+    const [state, dispatch] = useReducer(reducer, initialArg, initial)
+    ```
+
+    ```
+        const reducer = (state, action) => {
+            switch(action.type) {
+                case: 'increment'
+                    return { count: state.count + 1 };
+                default:
+                    throw new Error()
+            }
+        }
+
+        const Counter = () => {
+            const [state, dispatch] = useReducer(reducer, { count: 0 })
+        }
+    ```
+
+    - alternative to useState
+    - accepts a reducer of type (state, action) => newState
+
+
+useMemo
+    ```
+    const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
+    ```
+
+    - Only compute the function if dependencies(a, b) changes
+    - performance optimization
+
+useRef
+    ```
+    const refContainer = useRef(initialValue);
+    ```
+
+- Stores a reference to a ref object
+- ex: references a div
+
+
+useLayoutEffect
+    - identitical to useEffect, but it fires synchronously after all DOM mutations
+    - use to read layout from the DOM
+
+
+Building Custom Hooks
+    - Extract logic into it's own hook by creating an isolated environment
+    - Custom hooks are simply functions itself
+    - Can use existing hooks in these functions

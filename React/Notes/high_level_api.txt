@@ -1,0 +1,94 @@
+React Overview
+
+
+React Top Level API
+
+https://reactjs.org/docs/react-api.html
+
+# imports
+import React from 'react';
+
+# Components
+    - React.Component
+
+        class Welcome extends React.Component {
+            render() {
+                return <h1>Hello, {this.props.name}</h1>;
+            }
+        }
+
+        - only method require is render()
+        - Component Lifecycle - stages where we can override methods with our custom methods to be invoked
+            - Mounting
+                - constructor()
+                - getDerivedStateFromProps()
+                - render()
+                - componentDidMount()
+
+            - Updating
+                - static getDerivedStateFromProps
+                - shouldComponentUpdate()
+                - render()
+                - getSnapshotBeforeUpdaTe()
+                - componentDidUpdate()
+            
+            - Unmounting
+                - componentWillUnmount
+
+
+    - React.PureComponent
+        - similar to React.Component but does not implement shouldComponentUpdate()
+        - implements it with shallow prop and state comparison
+        - use if render function returns the same result given the same props and state
+        - Use case: if a child doesn't necessarily need to re-render when a parent re-renders
+
+
+React.memo
+    - higher order component (wraps around a react component)
+
+        const MyComponent = React.memo(function MyComponent(props)) {}
+
+    - checks if prop changes in the Components
+    - alternative to React.PureComponent for function components
+
+React.createElement
+
+    React.createElement(type, [props], [...children])
+
+    - code written in jsx is converted to React.createElement
+
+React.cloneElement
+
+    React.cloneElement(element, [props], [...children])
+
+React.Fragment
+    - lets you return multiple elements in a render() method without creating an additional DOM element
+
+React.createRef
+    - creates a ref that can be attached to REact elements via the ref attribute
+
+React.lazy
+    - lets you define a component that is loaded dynamically
+    - reduces bundle size to delay loading components that aren't used during the initial render
+
+        const SomeComponent = React.lazy(() => import('./SomeComponent));
+
+    - requires <React.Suspense> component which is used to specify a loading indicator
+
+React.Suspense
+    - specify the loading indicator in case some components in the tree are not yet ready to render
+    - lazy loading is the only feature supported
+
+        const OtherComponent = React.lazy(() => import('./OtherComponent));
+
+        function MyComponent() {
+            return (
+                <React.Suspense fallback={<Spinner />}>
+                    <div>
+                        <OtherComponent />
+                    </div>
+                </React.Suspense>
+            )
+        }
+
+        

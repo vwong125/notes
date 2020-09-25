@@ -1,0 +1,217 @@
+git config
+    - get and set repository or global options
+    - typically used for setting username and email
+
+    ```
+    git config --global user.name "[name]"
+    git config --global user.email "[email]"
+    ```
+
+
+git init
+    - used to start a new local repository
+
+    ```
+    git init
+    ```
+
+git clone
+    - used to copy a hosted repository to your local computer
+
+    ```
+    git clone <url>
+    ```
+
+git add
+    - used to add files to the staging area
+    - using '.' will add all modified files to the staging area
+    ```
+    git add <file_name>
+    ```
+
+git commit
+    - records or snapshots the file permanently in the version history
+    - commits any files from the staging area
+    ```
+    git commit <message>
+    ```
+
+git diff
+    - shows differences between files based on the flag
+
+    ```
+    git diff --staged
+    ```
+
+    ```
+    git diff <first-branch> <second-branch>
+    ```
+
+git reset
+    - unstages the file, but preserves the file contents
+    ```
+    git reset <file>
+    ```
+
+    - undoes all the commits after the specified commit and 
+    preserves the changes locally
+    
+    ```
+    git reset <commit>
+    ```
+    
+    - discards all history and goes back to the specified commit
+    ```
+    git reset --hard <commit>
+    ```
+
+git status
+    - lists all the files that have to be commited
+
+    ```
+    git status
+    ```
+
+git rm
+    - deletes the file from your working directory and stages the deletion
+
+    ```
+    git rm <file>
+    ```
+
+git log
+    - used to list the version history for the current branch
+
+    ```
+    git log
+    ```
+
+    - can be used to list version history of a file
+
+    ```
+    git log --follow <file>
+
+git show
+    - shows the metadata and content changes of the specified commit
+    ```
+    git show <commit>
+
+git tag
+    - used to tag specified commits
+    ```
+    git tag <commitID>
+    ```
+
+git branch
+    - lists all the local branches in the current repository
+
+    ```
+    git branch
+    ```
+
+    - create a new branch
+    ```
+    git branch <branch_name>
+    ```
+
+    - delete a branch
+    ```
+    git branch -D <branch_name>
+    ```
+
+git checkout
+    - switch from one branch to another
+    ```
+    git checkout <branch_name>
+    ```
+
+    - create and checkout to another branch
+    ```
+    git checkout -B <branch_name>
+    ```
+
+git merge
+    - merges the specified branch history into the current branch
+
+    ```
+    git merge <branch_name>
+    ```
+
+git remote
+    - used to connect your local repository to the remote server
+
+    ```
+    git remote add <origin | variable> <remote_server_link>
+    ```
+
+git push
+    - sends the commited changes of a branch to your remote repository
+
+    ```
+    git push
+    ```
+
+git pull
+    - fetches and merges changes on the remote server to your working directory
+
+    ```
+    git pull <repository_link>
+    ```
+
+git stash
+    - temporarily stores all modified tracked files
+
+    ```
+    git stash save
+    ```
+
+    - command restores the most recently stashed files
+
+    ```
+    git stash pop
+    ```
+
+    - command lists all stashed changes
+
+    ```
+    git stash list
+    ```
+
+    - command discards the most recently stashed changeset
+
+    ```
+    git stash drop
+    ```
+
+git rebase
+    - command is used to interact with previous commits either to change
+    commit history or squash multiple commits
+    - n is an integer
+
+    ```
+    git rebase -i HEAD~n
+    ```
+
+    - command is used to rebase commits from a branch onto the current branch
+
+    ```
+    git rebase <branch>
+    ```
+
+    example:
+
+    initial
+
+            A---B---C topic
+         /
+    D---E---F---G master
+
+
+    executing: git rebase master
+
+    result
+
+                      A'--B'--C' topic
+                 /
+    D---E---F---G master
+

@@ -1,0 +1,101 @@
+JSX
+
+    ```
+        const MyComponent = () => {
+            return <h1>Hello World</h1>
+        }
+    ``` 
+    - JSX is a declarative way to define your React components
+    - Compiles to regular javascript functions which return javascript objects (React.createElement)
+    - CAn use if statements, for loops, etc...
+    - use {} to embed a javascript expression as an attribute
+
+Rendering Elements
+    - use React crate calls or JSX
+    - React updates when necessary (change in state, props)
+        - compares new state with old state
+
+Components and Props
+    - function components
+
+    - class components
+
+
+    - props are read-only
+
+
+Event Handlers
+    ```
+    <button onClick={(e) => this.deleteRow(id, e)}> Delete Row </button>
+    <button onClick={this.deleteRow.bind(this, id)}> Delete Row </button>
+    ```
+    - when setting an onClick event handler, ensure you use an arrow function or bind the function
+
+
+Conditional Rendering
+    ```
+    const Greeting = () => {
+        if (condition) {
+            return <HelloWorld />
+        }
+
+        return <GoodbyeWorld />
+    }
+
+    - use an if condition where the condition depends on a state or prop
+
+
+    ```
+    const Greeting = () => {
+        return (
+            <div>
+
+                { condition && return <HelloWorld /> }
+
+            </div>
+        )
+    }
+
+    ```
+
+    - use inline condition and logical && operator
+
+
+    ```
+    render() {
+        return (
+            <div>
+                The user is <b>{isLoggedIn ? "currently": "not"}</b> logged in.
+            </div>
+        )
+    }
+    ```
+
+    - use a ternary operator inline
+
+
+    ```
+    const HideComponent = (props) => {
+        return (
+            { props.hide ? null: <div>I am here</div> }
+        )
+    }
+
+    - return null if you want to hide the component
+
+
+Lists and Keys
+    ```
+    const numbers = [1, 2, 3, 4, 5];
+    const listItems = numbers.map((number) => <li key=number.toString()>{numbers}</li>);
+
+    const MyComponent = () => {
+        return (
+            <ul> { listItems } </ul>
+        )
+    }
+    ```
+
+    - use the map function to render multiple elements
+    - when using map to create elements, must attach a key attribute to the element
+    - keys are used to identify which items have changed, added, or been removed. This should be unique
