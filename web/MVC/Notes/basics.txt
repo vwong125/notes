@@ -1,0 +1,24 @@
+MVC (Model View Controller)
+
+Software Architectural pattern
+
+Separates application functionality and promotes organized programming
+
+Examples:
+    - Ruby on Rails
+    - Express
+    - Django
+    - Flask
+
+Model
+    - Data related logic
+    - Interactions with the database (CRUD)
+    - communicates with the Controller
+    - can sometimes update the view(depends on the framework)
+
+View
+    - what the end user sees (UI)
+    - usually consists of HTML/CSS
+    - communicates with the controller
+    - can be passed dynamic values from the controller
+    - template engines

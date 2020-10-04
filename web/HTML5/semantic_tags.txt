@@ -1,0 +1,32 @@
+Semantic Tags:
+    - <article>
+        - intended to be independently distributable or reusable
+    - <aside>
+        - intended for content that is not part of the flow of the text, however still related in some way
+    - <details>
+    - <figcaption>
+        - provide a caption for the image
+    - <figure>
+        - wrap images
+    - <footer>
+        - generally found at the bottom of the page
+    - <header>
+        - generally the top of a document
+    - <main>
+    - <mark>
+    - <nav>
+        - contain menu items for navigation between the page
+    - <section>
+        - intended to be a thematic grouping of content
+    - <summary>
+    - <time>
+        - allows unambiguous ISO 8601 date to be attached to a human-readable version
+        - more so meant for computers to read the date
+
+- header, nav, section, article, aside, footer are more or less div elements
+
+Why use semantic tags?
+
+    - easier to read
+    - greater accessibility, seo,
+    - consistent code

@@ -1,0 +1,20 @@
+Problem
+
+    - You created an application that handles transportation of a truck, but
+    you want to extend your application to support other transportation such as vehicles, boats, etc...
+
+
+Solution
+
+    - Create abstract classes of class to be created and a factory class,
+    create a concerete factory for each concrete class. Leave the creation
+    of the the classes to the factory.
+
+Pros
+    - avoid tight coupling between the creator and the concrete products
+    - single responsibility principle: you can move the product creation code into one place in the program
+    - open/closed principle: introduce new types of products into the program without breaking existing client code
+
+Cons
+    - code may become more complicated since you need to introduce a lot
+    of new subclasses to implement the pattern

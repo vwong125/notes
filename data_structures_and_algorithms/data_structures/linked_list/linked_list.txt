@@ -1,0 +1,22 @@
+A data structure that represents a sequence of nodes.
+
+In a single linked list, each node points to the next node in the linked list as represented:
+
+| 1 | ----> | 2 | ----> | 3 | ----> | 4 | ----> None
+
+In a doubly linked list, each node points to the next node and previous node
+
+None  <-----| 1 | <----> | 2 | <----> | 3 | <----> | 4 | ----> None
+
+Tips:
+    - when working with linked lists, you need to keep a reference to head of the linked list as this is usally what we return
+    - to delete a node from a linked list, modify the next property
+    - runner method
+        - iterate through the linked list with two pointers
+
+    - recursion
+        - a few problems utilize recursion
+        - recursive algorithms take at least O(n) space where n is the depth of the recursion
+        - all recursive algorithms can be implemented iteratively
+
+    

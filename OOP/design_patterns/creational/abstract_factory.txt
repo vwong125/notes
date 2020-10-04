@@ -1,0 +1,27 @@
+Abstract Factory is a creational design pattern that lets you produce families of related objects without 
+specifying their concrete classes
+
+Problem
+
+    - need to create variants of a family of related items
+    - for instance create a chair, sofa, and coffeetable in different variants
+
+Solution
+
+    - explicitly declare interfaces for each distinct product of the product family
+    - declare the abstract factory that will return the abstract product types represented by the interfaces
+    - for each product variant, we create a separate factory class based on the abstract factory
+        - create a factory for victorianfurniture, modernfurniture, etc..
+
+Applicability
+    
+    - provides you with an interface for creating objects from each class of the product family.
+    As long as your code creates object via this interface.
+
+
+Pros
+    - You can be sure that the products you're getting from a factory are compatible with each other
+    - avoid tight coupling between concrete products and client code
+    - single responsibility principle: extract product creation code
+    - open/closed principle: introduce new variants of products without breaking existing client code
+

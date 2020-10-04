@@ -1,0 +1,24 @@
+http - hypertext transfer protocol
+    - used for transfering web documents
+    - sent in clear text
+    - vulnerable to interception
+
+https - secure hypertext transfer protocol
+    - encrypts data retrieved by http
+    - utilizes encryption algorithms (TLS)
+    - utilizes TLS/SSL certificates that verifies the provider
+
+    - when a user goes to a webpage, the webpage will send it's SSL 
+    certificate and go through a process called SSL/TLS handshake
+
+TLS - transport layer security
+    - encryption protocol designed to secure internet communications
+    - undergoes TLS handshake
+        - two communicating sides exchange messages, verify each other, establish encryption algorithms, agree on session keys
+
+SSL certificates
+    - enable websites to move from HTTP to HTTPS
+    - data file hosted in a website's origin server
+    - make SSL/TLS encryption possible
+    - contains the public key and identity of the website
+    - receive a certificate from a certified authority (CA)

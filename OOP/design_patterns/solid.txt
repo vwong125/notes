@@ -1,0 +1,24 @@
+Single responsibility principle
+Open/closed principle
+Liskov's substitution principle
+Interface segregation principle
+Dependency Inversion principle
+
+
+Single Responsbility Principle
+    - a class should only have a single responsibility
+
+Open-closed principle
+    - classes should be open for extension, but closed for modifiability
+
+Liskov substitution principle
+    - Objects in a program should be replaceable with their subtypes
+    without altering the correctness of the program
+    - Polymorphism
+
+Interface segregation principle
+    - Many client-specific interfaces are better than one general purpose interface
+
+Dependency inversion principle
+    - One should depend upon abstractions, not concretions
+    - high level modules should not depend on low-level modules, but both should depend on abstractions

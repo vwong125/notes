@@ -1,0 +1,39 @@
+a tree is a data structure composed of nodes
+
+    - each tree has a root node
+    - the root node has zero or more child nodes
+    - each child node has zero or more child nodes
+
+trees cannot contain cycles otherwise it is known as a graph
+
+Definitions
+    - Trees vs Binary Trees
+        - a binary tree is a tree in which each node has up to two children
+        - not all trees are binary trees
+
+    - Binary Tree vs Binary Search Tree
+        - binary search tree is a binary tree in which every node fits a specific ordering
+        property - all left descendents < n < right descendents
+
+    - Balanced vs unbalanced
+        - balanced enough to ensure O(log n)
+
+    - Complete binary trees
+        - every level must be fully filled except for perhaps the last level
+        - filled left to right
+
+    - Full binary tree
+        - every node has 0 or 2 children
+
+    - Perfect binary tree
+        - both full and complete
+
+Binary Tree Traversal
+    - inorder
+        - visit left, current, right
+
+    - preorder
+        - visit current, left ,right
+
+    - postorder
+        - visit left, right, current

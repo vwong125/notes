@@ -1,0 +1,27 @@
+Step 1: Handle Ambiguity
+
+    - tackle the 6 W's
+        - who, what, when, where, why, how
+
+Step 2: Define the Core Objects
+
+    - Consider what the core objects of the system will be
+
+Step 3: Analyze Relationships
+    
+    - determine the relationships between objects
+    - compositions vs inheritence
+    - 1 - 1, 1 - many
+
+Step 4: Investigate Actions
+    
+    - what are the key actions/behaviours that each object must do
+
+Design Patterns (Singleton, Factory)
+
+    - Singleton Class
+        - Defines a class that only has a single instance
+        - initialized as a global instance
+
+    - Factory Method
+        - Creates an interface for creating a class
