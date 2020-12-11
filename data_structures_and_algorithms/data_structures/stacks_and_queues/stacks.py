@@ -7,13 +7,13 @@ class Stack:
 
     def pop(self):
         return self.stack.pop()
-    
+
     def push(self, item):
         self.stack.append(item)
 
     def peek(self):
         return self.stack[len(self.stack) - 1]
-    
+
     def isEmpty(self):
         return len(self.stack) == 0
 

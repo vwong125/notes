@@ -14,7 +14,7 @@ Solution
         - create a factory for victorianfurniture, modernfurniture, etc..
 
 Applicability
-    
+
     - provides you with an interface for creating objects from each class of the product family.
     As long as your code creates object via this interface.
 

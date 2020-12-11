@@ -3,17 +3,15 @@ a datastructure that implements FIFO (first in first out) ordering
 utilizes the following methods:
     - add(item)
         - add an item to the end of the list
-    
+
     - remove
         - remove the first item in the list
 
     - peek()
         - return the top of the queue
-        
+
     - isEmpty()
         - return true if and only if the stack is empty
 
 useful in certain recursive algorithms
     - push data onto a stack as you recurse and then remove as you backtrack
-    
-    

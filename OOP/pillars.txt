@@ -1,0 +1,10 @@
+Abstraction
+	- simplifying complex applications by only allowing a public inter
+
+Encapsulation
+
+
+Inheritance
+
+
+Polymorphism
